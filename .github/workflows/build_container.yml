@@ -23,8 +23,7 @@ jobs:
         with:
           image: ${{ env.IMAGE_NAME }}
           tags: latest ${{ github.sha }}
-          containerfiles: |
-            ./Containerfile
+          containerfiles: ./Containerfile
 
       - name: Log in to the GitHub Container registry
         uses: redhat-actions/podman-login@v1
